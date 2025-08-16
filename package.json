@@ -4,7 +4,7 @@
   "description": "University management system backend with Express, TypeScript, and MongoDB",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && mkdir -p public && echo 'Built successfully' > public/.vercel-build-complete",
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "jest"
