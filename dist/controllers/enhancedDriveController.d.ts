@@ -1,0 +1,9 @@
+export declare const createDriveFile: (req: any, res: any, next: any) => void;
+export declare const getDriveFiles: (req: any, res: any, next: any) => void;
+export declare const getDriveFileById: (req: any, res: any, next: any) => void;
+export declare const updateDriveFile: (req: any, res: any, next: any) => void;
+export declare const deleteDriveFile: (req: any, res: any, next: any) => void;
+export declare const getMyDriveFiles: (req: any, res: any, next: any) => void;
+export declare const downloadDriveFile: (req: any, res: any, next: any) => void;
+export declare const getDriveAnalytics: (req: any, res: any, next: any) => void;
+//# sourceMappingURL=enhancedDriveController.d.ts.map

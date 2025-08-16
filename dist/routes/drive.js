@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const driveController_1 = require("../controllers/driveController");
+const auth_1 = require("../middleware/auth");
+const validation_1 = require("../middleware/validation");
+const validation_2 = require("../middleware/validation");
+const types_1 = require("../types");
+const router = (0, express_1.Router)();
+router.use(auth_1.authenticate);
+router.post('/upload', driveController_1.uploadMiddleware, driveController_1.uploadFile);
+router.get('/files', driveController_1.getDriveFiles);
+router.get('/files/:fileId', driveController_1.getDriveFileById);
+router.get('/files/:fileId/download', driveController_1.downloadDriveFile);
+router.put('/files/:fileId', driveController_1.uploadMiddleware, driveController_1.updateFile);
+router.delete('/files/:fileId', driveController_1.deleteFile);
+router.get('/my/files', driveController_1.getMyDriveFiles);
+router.get('/analytics', (0, auth_1.authorize)(types_1.UserRole.ADMIN), driveController_1.getDriveAnalytics);
+router.post('/folders', (0, validation_1.validateRequest)(validation_2.driveValidationSchemas.createFolder), driveController_1.createFolder);
+router.post('/files/:fileId/share', (0, auth_1.authorize)(types_1.UserRole.INSTRUCTOR, types_1.UserRole.ADMIN), (0, validation_1.validateRequest)(validation_2.driveValidationSchemas.shareFile), driveController_1.shareFile);
+router.get('/files/:fileId/permissions', driveController_1.getFilePermissions);
+router.get('/drive/files', driveController_1.getFiles);
+router.get('/drive/files/:fileId', driveController_1.getFileById);
+router.get('/drive/files/:fileId/download', driveController_1.downloadFile);
+exports.default = router;
+//# sourceMappingURL=drive.js.map

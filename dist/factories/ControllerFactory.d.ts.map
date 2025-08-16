@@ -1,0 +1,1 @@
+{"version":3,"file":"ControllerFactory.d.ts","sourceRoot":"","sources":["../../src/factories/ControllerFactory.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,+BAA+B,CAAC;AAC/D,OAAO,EAAE,YAAY,EAAE,MAAM,wBAAwB,CAAC;AAEtD,qBAAa,iBAAiB;IAC5B,MAAM,CAAC,gBAAgB,CAAC,CAAC,EAAE,OAAO,EAAE,YAAY,CAAC,CAAC,CAAC,EAAE,YAAY,EAAE,MAAM,GAAG,cAAc,CAAC,CAAC,CAAC;CAO9F"}
